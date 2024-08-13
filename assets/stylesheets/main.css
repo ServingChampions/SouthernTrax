@@ -129,8 +129,8 @@ p{
 
 .logo img {
   padding: 20px;
-  height: 40%;
-  width: 40%;
+  height: 95%;
+  width: 95%;
   margin: 10px 0;
   vertical-align: top;
 }
@@ -211,7 +211,7 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,15 +220,22 @@ p{
 }
 
 .overlay p {
-    color: #00c21f;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
+  color: #00c21f;
+  padding-top: 150px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 
+      -1px -1px 0 #000, /* Top-left outline */
+      1px -1px 0 #000,   /* Top-right outline */
+      -1px 1px 0 #000,   /* Bottom-left outline */
+      1px 1px 0 #000;    /* Bottom-right outline */
 }
 
+
 .service-item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -237,11 +244,11 @@ p{
   Photo Gallery
   /*/
 
-  .gallery{
+  .gallery {
     padding: 15px;
-  }
+}
 
-  .photo-grid {
+.photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -249,10 +256,13 @@ p{
 
 .photo-grid img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     border-radius: 5px;
+    aspect-ratio: 1/1; /* Ensures all images are square */
 }
+
 
   /*/
   SocMed
@@ -374,8 +384,6 @@ p{
     border-radius: 5px;
   }
 
-
-
   /*/
   sc footer
   /*/
@@ -432,43 +440,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* 
-Header & Footer
-*/
-.primary-nav {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  padding-top: 50px;
-}
-.nav {
-  display: flex;
-  justify-content: center;
-}
-
-.primary-header a,
-.primary-footer a {
-  color: black;
-}
-.primary-header a:hover,
-.primary-footer a:hover {
-  color: #344945;
-}
-
-.nav li {
-  display: inline-block;
-  margin: 10px;
-  vertical-align: top;
-}
-
-.primary-footer{
-  padding-top: 50px;
-  padding-bottom: 15px;
-}
-
-
-
 
 /* 
 Custom Styles
@@ -514,22 +485,6 @@ p{
 Buttons
 */
 
-
-.facebook {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 5px;
-}
-
-.facebook img {
-  max-width: 50%;
-  height: auto;
-  max-height: 75px; /* Adjust the max-height as needed */
-  margin: 0 auto; /* Center horizontally */
-}
-
 .button-container {
   display: flex;
   justify-content: space-evenly;
@@ -549,63 +504,6 @@ Buttons
 .button:hover {
   background-color: #2980b9; /* Adjust hover background color as needed */
 }
-
-
-/* 
-Index
-*/
-.intro h1{
-  display: flex;
-  justify-content: center;
-  text-transform: capitalize;
-}
-
-.intro h3{
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
-}
-
-.logoimg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logoimg img {
-  padding: 10px;
-  height: 100%;
-  width: 100%;
-  margin: 10px 0;
-  vertical-align: top;
-}
-
-.quote{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: #b30000;
-  padding: 10px 0;
-}
-
-.quote h2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #b30000;
-  padding: 10px 0;
-}
-
-
-
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 5px;
-}
-
-
 
 /* 
 Connect
